@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<style>
+	
+	
+	table
+	{
+		margin:20px 100px;
+		width:75%;
+		
+	}
+	tr,td
+	{
+	padding:5px;
+	}
+	</style>
+</head>
+
+
+<body>
+<form action="http://localhost:8080/ERS/EmployeeRegServlet">
+            
+  <h2 style="text-align:center">Registration Form</h2>
+  <br>
+  <table >
+   
+      <tr>
+        <td>UserName</td>
+        <td><Input  type="text" name="user" required></td> 
+      </tr>
+    
+    	<tr>
+        <td >DOB</td>
+        <td><input type="date" name="dob" required></td>
+      </tr>
+      
+      <tr>
+        <td>Email</td>
+        <td ><input  type="email" name="email" required></td>
+      </tr>
+      
+      <tr>
+        <td>Address</td>
+        <td><input  type="text" name="address" required></td>
+      </tr>
+       
+       <tr>
+        <td >ContactNo</td>
+        <td><input  type="tel" name="phnNo" required></td>
+      </tr>
+
+      <tr>
+        <td><label>Gender</label></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Female<input  type="radio" name="gender" value="Female" ></td>
+        <td>Male<input  type="radio" name="gender" value="Male" ></td>
+      
+      </tr>
+      
+       
+         <tr>
+        <td><label>Type</label></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Employee<input  type="radio" name="typeEmp" value="Employee" ></td>
+        <td>Manager<input  type="radio" name="typeEmp" value="Manager" ></td>
+      
+      </tr>
+       
+        
+    
+      
+      
+      <tr>
+        <td><input type="submit" name="submit"></td>
+        <td ><input type="reset" name="Cancel"></td>
+      
+      </tr>
+    
+  </table>
+  </form>
+
+
+</body>
+</html>
