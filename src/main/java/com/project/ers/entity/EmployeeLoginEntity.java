@@ -3,6 +3,7 @@ package com.project.ers.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 public class EmployeeLoginEntity {
 
 	@Id
+	@OneToOne(mappedBy="email")
 	   private String username;
 	
 	@Column(nullable=false)
