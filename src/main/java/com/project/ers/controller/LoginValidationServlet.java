@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.project.ers.dto.EmployeeLogin;
 import com.project.ers.entity.EmployeeLoginEntity;
 import com.project.ers.entity.EmployeeRegEntity;
@@ -22,10 +24,10 @@ import com.project.ers.service.LoginValidationServiceImp;
 
 public class LoginValidationServlet extends HttpServlet {
 	
-   
+   Logger logger=Logger.getLogger("LoginValidationServlet.class");
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	
+	logger.info("In servlet-LoginVaidationServlet");
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		String userName=request.getParameter("username");

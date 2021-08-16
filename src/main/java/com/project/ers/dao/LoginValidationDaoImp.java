@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
@@ -16,8 +17,10 @@ import com.project.ers.mapper.EmployeeLoginValidationMapper;
 
 public class LoginValidationDaoImp implements LoginValidationDao {
 	
+	 Logger logger=Logger.getLogger("LoginValidationDaoImp.class");
 	 public int loginValidate(EmployeeLogin employeeLogin) {
 			
+		 logger.info("In Dao-LoginValidation");
 		 List<EmployeeLoginEntity>empList=new ArrayList<>();
 		 int flag=0;
 			try {
