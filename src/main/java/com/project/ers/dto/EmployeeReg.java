@@ -18,9 +18,6 @@ public class EmployeeReg {
     private String gender;
     private String type;
     
-    
-	
-	
 	public String getType() {
 		return type;
 	}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ReimbursementRequest</title>
+	<style>
+	
+	
+	table
+	{
+		margin:20px 100px;
+		width:75%;
+		
+	}
+	tr,td
+	{
+	padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Reimbursement Request</h2>
+<form action="http://localhost:8080/ERS/ReimbursementRequestServlet">
+<table>
+
+<tr>
+	<td>Reimbursement Id</td>
+	<td><input type="text" name="reimbId"/></td>
+</tr>
+
+<tr>
+	<td>Reimbursement Type</td>
+	<td><select name="type">
+			<option value="Education">Education</option>
+			<option value="Travel">Travel</option>
+			<option value="OfficeWork">OfficeWork</option>
+	
+	</select></td>
+</tr>
+
+<tr>
+	<td>Price</td>
+	<td><input type="number" name="price" min="500" max="50000"/></td>
+</tr>
+
+<tr>
+	<td>Date</td>
+	<td><input type="date" name="date"/></td>
+</tr>
+
+<tr>
+	<td>
+	
+	
+	<button type="submit" value="sendRequest">Send Reimbursement Request</button></td>
+	<td>
+	
+	
+	<button type="reset">Reset</button></td>
+</tr>
+
+
+</table>
+</form>
+</body>
+</html>

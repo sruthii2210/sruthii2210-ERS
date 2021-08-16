@@ -35,12 +35,15 @@ public class UserPassServlet extends HttpServlet {
 		 EmployeeLoginService employeeLoginService= new EmployeeLoginServiceImp();
 		
 	     int result=employeeLoginService.addEmpLogin(employeeLogin);
+	     
+	     if(result==1)
+	    	 response.sendRedirect("http://localhost:8080/ERS/loginValidation.html");
 	   
 		}
 		
 		else
 		{
-			out.print("pwd and confirm pwd should be same");
+			out.print("password and confirm password should be same");
 			response.sendRedirect("http://localhost:8080/ERS/userpass.html");
 		}
 		

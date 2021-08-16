@@ -16,10 +16,10 @@ public class EmployeeRegServlet extends HttpServlet {
 	
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//PrintWriter out=response.getWriter();
+		PrintWriter out=response.getWriter();
 
 		response.setContentType("text/html");
-		
+		int ct=0;
 		String name=request.getParameter("user");
 		String dob=request.getParameter("dob");
 		String email=request.getParameter("email");
@@ -43,10 +43,29 @@ public class EmployeeRegServlet extends HttpServlet {
 		EmployeeRegService employeeRegService= new EmployeeRegServiceImp();
 		
 		
-		int result=employeeRegService.addEmployee(employeeReg);
+		if(type=="Employee")
+		{
+			int result=employeeRegService.addEmployee(employeeReg);
 		
-		if(result==1)
+			if(result==1)
 			response.sendRedirect("http://localhost:8080/ERS/userpass.html");  
+		}
+		
+		else
+		{
+			ct=ct+1;
+			
+			
+			if(ct==1)
+			{
+				int result=employeeRegService.addEmployee(employeeReg);
+				if(result==1)
+					response.sendRedirect("http://localhost:8080/ERS/userpass.html"); 
+				else
+					out.println("Only one manager is allowed");
+				
+			}
+		}
 		
 				
 		

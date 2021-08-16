@@ -1,9 +1,12 @@
 package com.project.ers.entity;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -15,6 +18,17 @@ import com.sun.istack.NotNull;
 
 public class EmployeeRegEntity {
 
+	
+
+	@OneToMany(mappedBy="empEmail")
+	private Set<EmpReimbursementEntity> reimbursements;
+	
+	
+	@OneToOne(mappedBy="username")
+	private EmployeeLoginEntity user;
+	
+	
+	
 		@Column(nullable=false)
 	   private String name;
 		
@@ -22,8 +36,6 @@ public class EmployeeRegEntity {
 		private String dob;
 
 		@Id	
-	@OneToOne(targetEntity=EmployeeLoginEntity.class)
-	@JoinColumn(name="username")
 	   private String email;
 		
 		@Column(nullable=false)
@@ -38,6 +50,17 @@ public class EmployeeRegEntity {
 		@Column(nullable=false)
 		private String type;
 
+		
+		
+		public String getEmail() {
+			return email;
+		}
+
+		public void setEmail(String email) {
+			this.email = email;
+		}
+
+		
 		public String getType() {
 			return type;
 		}
@@ -62,13 +85,8 @@ public class EmployeeRegEntity {
 			this.dob = dob;
 		}
 
-		public String getEmail() {
-			return email;
-		}
-
-		public void setEmail(String email) {
-			this.email = email;
-		}
+		
+		
 
 		public String getAddress() {
 			return address;
@@ -93,7 +111,12 @@ public class EmployeeRegEntity {
 		public void setGender(String gender) {
 			this.gender = gender;
 		}
-		
+		@Override
+		public String toString() {
+			return "EmployeeRegEntity [ user=" + user + ", name=" + name + ", dob="
+					+ dob + ", email=" + email + ", address=" + address + ", phnNo=" + phnNo + ", gender=" + gender
+					+ ", type=" + type + "]";
+		}
 		
 	
 }

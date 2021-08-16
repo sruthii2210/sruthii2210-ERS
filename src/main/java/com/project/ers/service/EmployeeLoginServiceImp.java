@@ -14,5 +14,11 @@ public class EmployeeLoginServiceImp implements EmployeeLoginService{
 		 return flag;
 		 
 	 }
+	
+	public int newEmpLogin(EmployeeLogin e) {
+		 int flag=employeeLoginDao.newEmpLogin(e);
+		 return flag;
+		 
+	 }
 
 }

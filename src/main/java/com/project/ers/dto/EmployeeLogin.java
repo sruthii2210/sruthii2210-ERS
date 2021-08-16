@@ -5,7 +5,16 @@ public class EmployeeLogin {
 	private String userName;
 	private String pwd;
 	private String confirmPwd;
+	private Integer empId;
 	
+	
+	
+	public Integer getEmpId() {
+		return empId;
+	}
+	public void setEmpId(Integer empId) {
+		this.empId = empId;
+	}
 	public String getUserName() {
 		return userName;
 	}

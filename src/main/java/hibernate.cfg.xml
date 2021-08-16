@@ -18,7 +18,7 @@
 		
 		<mapping class="com.project.ers.entity.EmployeeRegEntity" />
 		<mapping class="com.project.ers.entity.EmployeeLoginEntity" />
-		
+		<mapping class="com.project.ers.entity.EmpReimbursementEntity" />
 			
 			
 			

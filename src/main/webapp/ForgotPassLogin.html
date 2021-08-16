@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body
+	{
+	background-image:url(userpass.jpg);
+	background-repeat:none;
+	background-size:cover;
+	color:white;
+	}
+table
+	{
+		margin:20px 100px;
+		width:75%;
+		
+	}
+	tr,td
+	{
+	padding:5px;
+	}
+</style>
+</head>
+<body>
+<center>
+<h2><i>Set your New Password!!</i></h2>
+<form action="http://localhost:8080/ERS/NewLoginCredentialsServlet" method="get">
+<table>
+<tr>
+	<td>Username</td>
+	<td><input type="email" name="user" placeholder="Your emailId"/>
+</tr>
+<tr>
+	<td>NewPassword</td>
+	<td><input type="password" name="pwd"/>
+</tr>
+<tr>
+	<td>Confirm Password </td>
+	<td><input type="password" name="confirmpwd" />
+</tr>
+
+<tr>
+	
+	<td><input type="submit" style="float:center;background-color:green;color:white;width:100px; height:25px"; value="Create" />
+	
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>
