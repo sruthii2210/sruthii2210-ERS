@@ -25,53 +25,28 @@ public class ManagerApprovalRequestsServlet extends HttpServlet {
         
         List<EmpReimbursementEntity> approved =reimbRequest.viewApprovedRequests();
         
-        for(EmpReimbursementEntity e:approved)
-	   	{
-	   	   
-	   	   out.println("<body>");
-	   	   out.println("<br>");
-	   	   out.println("<center>");
-	   	  out.println("<form>");
-	   		out.println("<table border='2'>");
-	   		out.println("<tr>");
-	   		out.println("<td>ReimbursementId</td>");
-	   	
-	   		out.println("<td><input name='id' type='text' value="+e.getReimbursementId()+" ></td>");
-	   		out.println("</tr>");
-	   		
-	   		out.println("<tr>");
-	   		out.println(" <td>ReimbursementType</td>");
-	   		out.println(" <td><input name='type' type='text' value="+e.getReimbursementType()+"></td>");
-	   		out.println("</tr>");
-	   		
-	   		out.println("<tr>");
-	   		out.println("<td>ReimbursementStatus</td>");
-	   		out.println("<td><input name='status' type='text' value="+e.getStatus()+"></td>");
-	   		out.println("</tr>");
-	   		
-	   		out.println("<tr>");
-	   		out.println("<td>ReimbursementDate</td>");
-	   		out.println("<td><input name='date' type='date' value="+e.getDate()+"></td>");
-	   		out.println("</tr>");
-	   		
-	   		out.println("<tr>");
-	   		out.println("<td>ReimbursementAmount</td>");
-	   		out.println("<td><input name='price' type='number' value="+e.getPrice()+"></td>");
-	   		out.println("</tr>");
-	   		
-	   		out.println("<tr>");
-	   		out.println("<td>EmployeeEmail</td>");
-	   		out.println("<td><input name='name' type='text' value="+e.getEmpEmail().getName()+"></td>");
-	   		out.println("</tr>");
-	   		
-	   		out.println("</table>");
-	   	 out.println("</form>");
-	   		out.println("</center>");
-	   		out.println("<br>");
-	   		
-	   	 out.println("</body>");
-	   	}
-	 
+        out.println("<table border='2'>");
+        out.println("<tr>");
+        out.println("<td>Reimbursement ID</td><td>Reimbursement Type</td><td>Reimbursement Email</td><td>Reimbursement Price</td><td>Reimbursement Date</td><td>Reimbursement Status</td>");
+        out.println("</tr>");
+
+
+        for(EmpReimbursementEntity list :approved)
+        {
+      	  out.println("<tr>");
+            out.println("<td>"+list.getReimbursementId()+"</td>");
+            out.println("<td>"+list.getReimbursementType()+"</td>");
+            out.println("<td>"+list.getEmpEmail().getEmail()+"</td>");
+            out.println("<td>"+list.getPrice()+"</td>");
+            out.println("<td>"+list.getDate()+"</td>");
+            out.println("<td>"+list.getStatus()+"</td>");
+            out.println("<tr>");
+        }
+          
+          out.println("</table>");
+         // out.println("<form action='http://localhost:8080/EmployeeReimbursementSystem/Employee.html'> <input type='submit' value='Back to Home'></form> ");
+          out.println("</center>");
+          out.println("</body>");
 	
 	}
 
