@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -71,7 +72,26 @@ public class EmployeeDetailsServlet extends HttpServlet {
 		out.println("</table>");
 		out.println("</center>");
 	   	
-	   	
+		
+		
+
+		
+	       if(employeeRegEntityList.get(0).getType().compareTo("Employee")==0)
+	       {
+	    	 
+	    	   out.println("<a href='employee.jsp'>Back to Home Page</a>");
+			
+	       }
+	       
+	       
+	       
+	       if(employeeRegEntityList.get(0).getType().compareTo("Manager")==0)
+	       {
+	    	   out.println("<a href='manager.jsp'>Back to Home Page</a>");
+
+			
+	       }
+			
 		
 		
 	}

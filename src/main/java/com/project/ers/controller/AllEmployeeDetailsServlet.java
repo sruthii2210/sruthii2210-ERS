@@ -48,7 +48,7 @@ public class AllEmployeeDetailsServlet extends HttpServlet {
 //		out.println("</h3>");
 //		out.println();
 //		}
-	
+	   	out.println("<br>");
 	   	out.println("<table border='2'>");
 	   	out.println("<tr>");
 	   	out.println("<td>EmployeeName</td><td>EmployeeType</td><td>EmployeeDOB</td><td>EmployeeAddress</td><td>EmployeePhnNo</td><td>Gender</td>");
@@ -63,6 +63,12 @@ public class AllEmployeeDetailsServlet extends HttpServlet {
 	   	
 	  
 	   	out.println("</table>");
+	   	
+	  
+	    	   out.println("<a href='manager.jsp'>Back to Home Page</a>");
+
+			
+	       
 	   	
 	}
 

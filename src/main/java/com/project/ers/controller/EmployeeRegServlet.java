@@ -55,7 +55,6 @@ public class EmployeeRegServlet extends HttpServlet {
 		{
 			ct=ct+1;
 			
-			
 			if(ct==1)
 			{
 				int result=employeeRegService.addEmployee(employeeReg);

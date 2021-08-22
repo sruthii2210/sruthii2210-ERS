@@ -71,7 +71,7 @@ function validate()
 %>
 <div class="ab">
 <%
-out.println("<h2>"+"Welcome "+username+"!!"+"</h2>");
+out.println("<i><h2>"+"Welcome Employee !!"+"</h2></i>");
  
 %>
 </div>

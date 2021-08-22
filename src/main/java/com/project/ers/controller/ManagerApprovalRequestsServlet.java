@@ -24,7 +24,7 @@ public class ManagerApprovalRequestsServlet extends HttpServlet {
 		EmpReimbursementService reimbRequest = new EmpReimbursementServiceImp();
         
         List<EmpReimbursementEntity> approved =reimbRequest.viewApprovedRequests();
-        
+        out.println("<br>");
         out.println("<table border='2'>");
         out.println("<tr>");
         out.println("<td>Reimbursement ID</td><td>Reimbursement Type</td><td>Reimbursement Email</td><td>Reimbursement Price</td><td>Reimbursement Date</td><td>Reimbursement Status</td>");
@@ -47,6 +47,13 @@ public class ManagerApprovalRequestsServlet extends HttpServlet {
          // out.println("<form action='http://localhost:8080/EmployeeReimbursementSystem/Employee.html'> <input type='submit' value='Back to Home'></form> ");
           out.println("</center>");
           out.println("</body>");
+          
+          
+        
+	    	   out.println("<a href='manager.jsp'>Back to Home Page</a>");
+
+			
+	       
 	
 	}
 

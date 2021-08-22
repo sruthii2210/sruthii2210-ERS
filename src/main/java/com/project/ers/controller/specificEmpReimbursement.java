@@ -66,7 +66,10 @@ public class specificEmpReimbursement extends HttpServlet {
 		   	}
 
    		
+		    	   out.println("<a href='manager.jsp'>Back to Home Page</a>");
 
+				
+		       
 		   			
 	}
 

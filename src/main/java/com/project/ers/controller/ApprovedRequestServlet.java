@@ -62,6 +62,9 @@ public class ApprovedRequestServlet extends HttpServlet {
        // out.println("<form action='http://localhost:8080/EmployeeReimbursementSystem/Employee.html'> <input type='submit' value='Back to Home'></form> ");
         out.println("</center>");
         out.println("</body>");
+        
+        out.println("<br>");
+        out.println("<a href='employee.jsp'>Back to Home Page</a>");
     }
 	
 	}

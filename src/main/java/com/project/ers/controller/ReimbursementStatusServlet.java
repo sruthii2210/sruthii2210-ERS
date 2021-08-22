@@ -32,61 +32,7 @@ public class ReimbursementStatusServlet extends HttpServlet {
 	   	empReimbursementEntity=empReimbursementService.viewReimbursement(email);
 	   	
 	   	
-//	   	if(empReimbursementEntity!=null)
-//	   	{
-//	   		request.setAttribute("ReimbList",empReimbursementEntity);
-//			RequestDispatcher rd = request.getRequestDispatcher("sample.jsp");
-//			rd.forward(request,response);
-//	   	}
-//	   
-	   	
-	   	
-	   	
-//	   	for(EmpReimbursementEntity e:empReimbursementEntity)
-//	   	{
-//	   	   
-//	   	   out.println("<body>");
-//	   	out.println("<br>");
-//	   	   out.println("<center>");
-//	   		out.println("<table border='2'>");
-//	   		out.println("<tr>");
-//	   		out.println("<td>ReimbursementId</td>");
-//	   		out.println("<td>"+e.getReimbursementId()+" </td>");
-//	   		out.println("</tr>");
-//	   		
-//	   		out.println("<tr>");
-//	   		out.println(" <td>ReimbursementType</td>");
-//	   		out.println(" <td>"+e.getReimbursementType()+"</td>");
-//	   		out.println("</tr>");
-//	   		
-//	   		out.println("<tr>");
-//	   		out.println("<td>ReimbursementStatus</td>");
-//	   		out.println("<td>"+e.getStatus()+"</td>");
-//	   		out.println("</tr>");
-//	   		
-//	   		out.println("<tr>");
-//	   		out.println("<td>ReimbursementDate</td>");
-//	   		out.println("<td>"+e.getDate()+"</td>");
-//	   		out.println("</tr>");
-//	   		
-//	   		out.println("<tr>");
-//	   		out.println("<td>ReimbursementAmount</td>");
-//	   		out.println("<td>"+e.getPrice()+"</td>");
-//	   		out.println("</tr>");
-//	   		
-//	   		out.println("<tr>");
-//	   		out.println("<td>EmployeeEmail</td>");
-//	   		out.println("<td>"+e.getEmpEmail().getName()+"</td>");
-//	   		out.println("</tr>");
-//	   		
-//	   		out.println("</table>");
-//	   		out.println("</center>");
-//	   		out.println("<br>");
-//	   		out.println("<br>");
-//	   	 out.println("</body>");
-//	   	}
-	   	
-	   	
+
 	   	out.println("<br>");
 	   	   out.println("<center>");
 	   		out.println("<table border='2'>");
@@ -104,6 +50,8 @@ public class ReimbursementStatusServlet extends HttpServlet {
 	   		
 		   	out.println("</table>");
 	   		out.println("</center>");
+	   		out.println("<br>");
+	   		out.println("<a href='employee.jsp'>Back to Home Page</a>");
 	   		
 	}
 

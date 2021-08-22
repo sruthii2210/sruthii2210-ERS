@@ -55,6 +55,10 @@ public class ReimbursementRequestServlet extends HttpServlet {
    	 int status=0;
    	 
    	 status=empReimbursementService.sendReimbursement(reimbursement,email);
+   	 if(status>0)
+   	 {
+   		out.println("<a href='employee.jsp'>Back to Home Page</a>");
+   	 }
 	
 	}
 

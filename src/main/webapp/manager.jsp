@@ -64,7 +64,7 @@ function validate()
 %>
 <div class="ab">
 <%
-out.println("<h2>"+"Welcome Manager!!"+"</h2>");
+out.println("<i><h2>"+"Welcome Manager!!"+"</h2></i>");
  
 %>
 </div>

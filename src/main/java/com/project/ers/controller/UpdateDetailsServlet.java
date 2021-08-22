@@ -54,21 +54,23 @@ public class UpdateDetailsServlet extends HttpServlet {
 		status=employeeRegService.updateDetails(employeeReg);
 		
 		
-//		if(type=="Employee"&&status==1)
-//		{
-//			request.setAttribute("attributeName",mail);
-//			RequestDispatcher rd = request.getRequestDispatcher("employee.jsp");
-//			rd.forward(request,response);
-//		}
-//		
-//		if(type=="Manager"&&status==1)
-//		{
-//			request.setAttribute("attributeName",mail);
-//			RequestDispatcher rd = request.getRequestDispatcher("manager.jsp");
-//			rd.forward(request,response);
-//		}
+		 if(type.compareTo("Employee")==0)
+	       {
+	    	 
+	    	   out.println("<a href='employee.jsp'>Back to Home Page</a>");
+			
+	       }
+	       
+	       
+	       
+	       if(type.compareTo("Manager")==0)
+	       {
+	    	   out.println("<a href='manager.jsp'>Back to Home Page</a>");
 
-  	
+			
+	       }
+
+		
   	}
 
 }

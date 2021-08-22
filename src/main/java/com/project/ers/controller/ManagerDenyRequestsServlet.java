@@ -67,11 +67,13 @@ PrintWriter out=response.getWriter();
 	   		out.println("</table>");
 	   	 out.println("</form>");
 	   		out.println("</center>");
-	   		out.println("<br>");
 	   		
 	   	 out.println("</body>");
 	   	}
-	 
+        
+       
+	    	   out.println("<a href='manager.jsp'>Back to Home Page</a>");
+
 	
 	}
 
